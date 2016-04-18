@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
+  color: #fff;
+}
+.container {
+  display: grid;
+  grid-template-rows: 33.33vh 33.33vh 33.33vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  /*定义网格区域名称*/
+  grid-template-areas: none;
+  /*grid-template-areas: "header header header"
+                         "main main main";*/
+  /*网格线宽度*/
+  /*grid-column-gap: 10px;
+  grid-row-gap: 15px;*/
+
+  /*沿列/行轴对齐网格项中的内容*/
+  /*justify-items: start;*/
+  /*align-item: start;*/
+
+  /*justify-items: stretch;
+  align-item: stretch;*/
+
+}
+.container .item1 {
+  /*隐式轨道如何创建*/
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
+  background-color: 	#A4D3EE;
+}
+.container .item2 {
+  /*grid-row: 3 / 4;
+  grid-column: 3 / 4;*/
+  background-color: 	#9AFF9A;
+}
+.container .item3 {
+  background-color: 	#EEEE00;
+}
+.container .item4 {
+  background-color: 	#6495ED;
+}
+.container .item5 {
+  background-color: 	#CD3278;
+}
+.container .item6 {
+  background-color: 	#EE9A00;
+}
+.container .item7 {
+  background-color: 	#F08080;
+}
+.container .item8 {
+  background-color: 	#BF3EFF;
+}
+.container .item9 {
+  background-color: 	#97FFFF;
+}
