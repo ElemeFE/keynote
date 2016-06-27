@@ -11,7 +11,7 @@ transition: zoomin
 [slide style="background:#000000 url('/img/bg1.jpg') no-repeat fixed center;"]
 
 # 函数 {:&.flexbox.vleft}
-## 热身体操 
+## 热身体操
 
 [slide]
 
@@ -21,7 +21,7 @@ transition: zoomin
 
 ## {:&.flexbox.left}
 * 比较纯粹的
-	* Cloujure
+	* Clojure
 	* Erlang
 	* Haskell
 	* Lisp
@@ -54,14 +54,14 @@ BOOL CALLBACK DialogProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam)
 {
 	switch(Message)
 	{
-		case WM_CLOSE:				
+		case WM_CLOSE:
 			DestroyWindow(hwnd);
 		break;
 	}
 	return 0;
 }
 
-int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, 
+int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,
 					LPSTR lpCmdLine, int nShowCmd )
 {
 	DialogBox( hInstance, MAKEINTRESOURCE(IDD_MAIN), NULL, DialogProc );
@@ -165,10 +165,10 @@ var c = b - 4;
 使用函数代替指令后就变成下面这样：
 ```javascript
 // var result = sub(multiply(add(1,2), 3), 4);
-var result = 
+var result =
   sub(
     multiply(
-        add(1,2), 
+        add(1,2),
       3),
     4);
 ```
@@ -181,7 +181,7 @@ var result =
 
 # Everythins is sequence
 
-Schema、Lisp、cloujure ...
+Schema、Lisp、clojure ...
 
 [slide]
 
@@ -208,8 +208,8 @@ Schema、Lisp、cloujure ...
 (- ( * ( + 1 2) 3) 4)
 ```
 
-```cloujure
-;; cloujure
+```clojure
+;; clojure
 (+ 1 1)
 (- 2 1)
 (* 1 2)
@@ -235,7 +235,7 @@ Schema、Lisp、cloujure ...
      右键点击:(popup)
      中键点击:(bomb)
      )
- 
+
 ; 网络请求
 (爪子 抓成功:(解析数据)
      抓失败:(弹窗告警写log)
