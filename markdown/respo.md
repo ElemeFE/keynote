@@ -1,9 +1,9 @@
 
-# Respo: a React-like DOM library
+## Respo: a React-like DOM library
 
 ----
 
-# 关于
+## 关于
 
 ChenYong(题叶)
 
@@ -13,7 +13,7 @@ React 开发. CoffeeScript, ClojureScript.
 
 ----
 
-# React 与函数式编程
+## React 与函数式编程
 
 * `pure render` 纯函数
 * DOM DSL, 一切皆是表达式
@@ -21,7 +21,7 @@ React 开发. CoffeeScript, ClojureScript.
 
 ----
 
-# React 的问题
+## React 的问题
 
 * 实际上代码中 mutable 数据是混用的毫无限制
 * JSX 繁琐, 且表达能力存在一些问题
@@ -32,7 +32,7 @@ React 开发. CoffeeScript, ClojureScript.
 
 ----
 
-# Clojure
+## Clojure
 
 * Lisp 方言 -- 强大的 DSL
 * 不可变数据和 Atom -- 限制 mutable 数据使用
@@ -48,7 +48,7 @@ ClojureScript, 编译到 JavaScript 运行, 项目活跃
 
 ----
 
-# Component
+## Component
 
     (ns respo.component.zero
       (:require [respo.alias :refer [create-comp div span]]))
@@ -63,7 +63,7 @@ More in repo...
 
 ----
 
-# DOM DSL
+## DOM DSL
 
     (input
       {:style style-input,
@@ -74,7 +74,7 @@ More in repo...
 
 ----
 
-# style DSL
+## style DSL
 
     (def style-toolbar
      {:width "300px",
@@ -85,7 +85,7 @@ More in repo...
 
 ----
 
-# listener DSL
+## listener DSL
 
     (defn on-text-change [props state mutate]
       (fn [simple-event dispatch]
@@ -93,7 +93,7 @@ More in repo...
 
 ----
 
-# Child Component
+## Child Component
 
     (div
       {:style style-list, :attrs {:class-name "task-list"}}
@@ -104,7 +104,7 @@ More in repo...
 
 ----
 
-# Diff an Element
+## Diff an Element
 
 * diff styles
 * diff attributes
@@ -117,7 +117,7 @@ More in repo...
 
 ----
 
-# Diff sorted-map
+## Diff sorted-map
 
     {:a 1      :c 3 :d 5}
     {:a 1 :b 3 :c 4}
@@ -130,7 +130,7 @@ More in repo...
 
 ----
 
-# Children 转化为 sorted-map
+## Children 转化为 sorted-map
 
     div
       span
@@ -146,7 +146,7 @@ More in repo...
 
 ----
 
-# list of items
+## list of items
 
     { :id1 component
     , :id2 component2
@@ -161,7 +161,7 @@ Diff/Patch 过程元素采用的是数组位置, 所以需要额外处理, 不�
 
 ----
 
-# patch
+## patch
 
 * style -- 直接操作
 * attributes -- 特殊处理 innerText
@@ -170,7 +170,7 @@ Diff/Patch 过程元素采用的是数组位置, 所以需要额外处理, 不�
 
 ----
 
-# 性能
+## 性能
 
 组件级别判断 `old-DOM` 的 Component 是否可以复用.
 
@@ -180,13 +180,13 @@ Diff/Patch 过程元素采用的是数组位置, 所以需要额外处理, 不�
 
 ----
 
-# 事件处理
+## 事件处理
 
 通过节点上的 `data-coord` 属性查找, 最终映射到 Component 代码.
 
 ----
 
-# Store
+## Store
 
 直接用 Clojure 的 Atom 解决
 
@@ -195,7 +195,7 @@ Diff/Patch 过程元素采用的是数组位置, 所以需要额外处理, 不�
 
 ----
 
-# 区别
+## 区别
 
 问题:
 
@@ -211,7 +211,7 @@ Diff/Patch 过程元素采用的是数组位置, 所以需要额外处理, 不�
 
 ----
 
-# 概括
+## 概括
 
 整体架构:
 

@@ -4,7 +4,7 @@ url: https://github.com/DavidCai1993
 transition: move
 theme: moon
 
-[slide]
+----
 
 ## Express & Koa
 
@@ -18,7 +18,7 @@ let app
 IAmVeryVeryHandsome ? app = new Koa() : app = express()
 ```
 
-[slide]
+----
 
 ## 从异步流程控制的发展说起
 
@@ -40,7 +40,7 @@ fs.createReadStream('/etc/passwd')
 .on('error', console.error)
 ```
 
-[slide]
+----
 
 ## 从异步流程控制的发展说起
 
@@ -57,7 +57,7 @@ fs.exists(__filename)
 .catch(console.error)
 ```
 
-[slide]
+----
 
 ## 从异步流程控制的发展说起
 
@@ -82,7 +82,7 @@ exists(__filename)(function (error, exists) {
 })
 ```
 
-[slide]
+----
 
 ## 从异步流程控制的发展说起
 
@@ -99,7 +99,7 @@ co(function * () {
 }).catch(console.error)
 ```
 
-[slide]
+----
 
 ## 从异步流程控制的发展说起
 
@@ -115,7 +115,7 @@ const fs = require('mz/fs')
 })().catch(console.error)
 ```
 
-[slide]
+----
 
 ## 两个框架中异步流程控制的核心理念不同
 
@@ -140,7 +140,7 @@ app.use(async function (ctx, next) {
 })
 ```
 
-[slide]
+----
 
 ## 首当其冲会导致的结果
 
@@ -174,7 +174,7 @@ app.use(async function (ctx, next) {
 })
 ```
 
-[slide]
+----
 
 ## 又一个导致的结果
 
@@ -197,7 +197,7 @@ return function logger (req, res, next) {
   // ...
 }
 ```
-[slide]
+----
 
 #### Koa: 洋葱模型
 
@@ -214,7 +214,7 @@ app.use(async function (ctx) {
 })
 ```
 
-[slide]
+----
 
 ## 总结一下
 
@@ -228,11 +228,11 @@ app.use(async function (ctx) {
 
 （koa 生态哪里找？ https://github.com/koajs/koa/wiki）
 
-[slide]
+----
 
 ## 一些黑科技
 
-[slide]
+----
 
 ## express 也用上 async / await
 
@@ -256,7 +256,7 @@ function wrap (fn, ctx) {
 }
 ```
 
-[slide]
+----
 
 ## 既然 koa 的官方 README 上已经都是 ES2017 的 async / await 函数了
 
@@ -289,12 +289,12 @@ module.exports = class AlarmController {
 }
 ```
 
-[slide]
+----
 
 https://github.com/DavidCai1993
 
 https://github.com/DavidCai1993/koa-decorators
 
-[slide]
+----
 
 ## Thanks
