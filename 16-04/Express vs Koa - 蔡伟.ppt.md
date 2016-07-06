@@ -6,7 +6,7 @@ theme: moon
 
 [slide]
 
-# Express & Koa
+## Express & Koa
 
 ```js
 'use strict'
@@ -20,9 +20,9 @@ IAmVeryVeryHandsome ? app = new Koa() : app = express()
 
 [slide]
 
-# 从异步流程控制的发展说起
+## 从异步流程控制的发展说起
 
-## Callback & Events
+### Callback & Events
 
 ```js
 'use strict'
@@ -42,9 +42,9 @@ fs.createReadStream('/etc/passwd')
 
 [slide]
 
-# 从异步流程控制的发展说起
+## 从异步流程控制的发展说起
 
-## Promise
+### Promise
 
 ```js
 'use strict'
@@ -59,9 +59,9 @@ fs.exists(__filename)
 
 [slide]
 
-# 从异步流程控制的发展说起
+## 从异步流程控制的发展说起
 
-## Thunk 函数
+### Thunk 函数
 
 ```js
 'use strict'
@@ -84,9 +84,9 @@ exists(__filename)(function (error, exists) {
 
 [slide]
 
-# 从异步流程控制的发展说起
+## 从异步流程控制的发展说起
 
-## 基于 generator 函数的 co
+### 基于 generator 函数的 co
 
 ```js
 'use strict'
@@ -101,9 +101,9 @@ co(function * () {
 
 [slide]
 
-# 从异步流程控制的发展说起
+## 从异步流程控制的发展说起
 
-## co 的标准化，async / await
+### co 的标准化，async / await
 
 ```js
 'use strict'
@@ -117,11 +117,11 @@ const fs = require('mz/fs')
 
 [slide]
 
-# 两个框架中异步流程控制的核心理念不同
+## 两个框架中异步流程控制的核心理念不同
 
-## Express: error first callback
+### Express: error first callback
 
-## Koa: async / await
+### Koa: async / await
 
 ```js
 // express
@@ -142,9 +142,9 @@ app.use(async function (ctx, next) {
 
 [slide]
 
-# 首当其冲会导致的结果
+## 首当其冲会导致的结果
 
-## 错误的捕获机制不同，基于 async / await 的捕获，同步异步一手抓
+### 错误的捕获机制不同，基于 async / await 的捕获，同步异步一手抓
 
 ```js
 // express
@@ -176,11 +176,11 @@ app.use(async function (ctx, next) {
 
 [slide]
 
-# 又一个导致的结果
+## 又一个导致的结果
 
-## 中间件的模型不同
+### 中间件的模型不同
 
-### express: 顺序传递
+#### express: 顺序传递
 ```js
 // expressjs/morgan
 
@@ -197,8 +197,9 @@ return function logger (req, res, next) {
   // ...
 }
 ```
+[slide]
 
-### Koa: 洋葱模型
+#### Koa: 洋葱模型
 
 ```js
 app.use(async function (ctx, next) {
@@ -215,9 +216,9 @@ app.use(async function (ctx) {
 
 [slide]
 
-# 总结一下
+## 总结一下
 
-## 使用 koa 的话
+### 使用 koa 的话
 
 更舒爽的异步流程控制体验。
 
@@ -229,11 +230,11 @@ app.use(async function (ctx) {
 
 [slide]
 
-# 一些黑科技
+## 一些黑科技
 
 [slide]
 
-# express 也用上 async / await
+## express 也用上 async / await
 
 ```js
 app.use(wrap(async function (req, res, next) {
@@ -257,9 +258,9 @@ function wrap (fn, ctx) {
 
 [slide]
 
-# 既然 koa 的官方 README 上已经都是 ES2017 的 async / await 函数了
+## 既然 koa 的官方 README 上已经都是 ES2017 的 async / await 函数了
 
-## 那就让 ES2017 的特性来的更猛烈一下吧
+### 那就让 ES2017 的特性来的更猛烈一下吧
 
 ```js
 // api/alarm.js
@@ -296,4 +297,4 @@ https://github.com/DavidCai1993/koa-decorators
 
 [slide]
 
-# Thanks
+## Thanks
