@@ -5,15 +5,38 @@
   <title>reveal.js</title>
   <style>
     *, *:before, *:after {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
+    html, body, .container {
+      background-color: #eee;
+      height: 100%;
+    }
+
     ul {
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 100%;
+      margin: 0 auto;
+      width: 960px;
+      padding: 30px;
       list-style: none;
     }
 
     li {
       margin-bottom: 20px;
+    }
+
+    li:after {
+      display: block;
+      content: '';
+      visibility: hidden;
+      height: 0;
+      clear: both;
     }
 
     a {
@@ -23,13 +46,14 @@
       font-size: 12px;
       line-height: 1;
       text-decoration: none;
-      border-radius: 5px;
       transition: all .2s ease-out;
+      cursor: pointer;
     }
 
     a.author {
       margin-right: 20px;
       border: 1px solid hsl(200, 100%, 60%);
+      border-radius: 50%;
       box-shadow: 2px 2px 5px 0 hsl(200, 100%, 60%);
       background: -moz-linear-gradient(hsl(200, 100%, 80%), hsl(200, 100%, 60%));
       background: -webkit-gradient(linear, 0 0, 0 100%, from(hsl(200, 100%, 60%)), to(hsl(200, 100%, 80%)));
@@ -37,20 +61,55 @@
 
     a.content {
       border: 1px solid hsl(300, 100%, 80%);
+      border-radius: 5px;
       box-shadow: 2px 2px 5px 0 hsl(300, 100%, 80%);
       background: -moz-linear-gradient(hsl(300, 100%, 80%), hsl(300, 100%, 60%));
       background: -webkit-gradient(linear, 0 0, 0 100%, from(hsl(300, 100%, 80%)), to(hsl(300, 100%, 60%)));
     }
 
-    li:hover a {
+    li:hover .content {
       padding: 40px;
       font-size: 16px;
+    }
+
+    li:hover .info-wrapper {
+      padding: 40px 0;
+    }
+
+    li:hover .icon {
+      transform: scale(1, 1);
+    }
+
+    .info-wrapper {
+      float: right;
+      transition: all .2s ease-out;
+      overflow: hidden;
+    }
+
+    .icon {
+      transform: scale(0, 0);
+      transform-origin: 50% 50%;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background-size: 100% 100%;
+      transition: all .2s ease-out;
+    }
+
+    .icon-github {
+      background-image: url('./tools/img/github.png');
+    }
+
+    .icon-weibo {
+      background-image: url('./tools/img/weibo.png');
     }
   </style>
 </head>
 <body>
-<ul id="list">
-</ul>
+<div class="container">
+  <ul id="list">
+  </ul>
+</div>
 </body>
 <script>
   const ajax = (path, callback) => {
@@ -70,7 +129,15 @@
     let result = '';
     let data = JSON.parse(menu);
     data.list.forEach(function (value) {
-      let html = `<li><a class="author" href="${value.homepage}" title="${value.author}">${value.author.replace(/(.).+$/, '$1')}</a><a class="content" href="./detail.html?path=./markdown/${value.path}&title=${value.title}">${value.title}</a></li>`
+      let html = `
+      <li>
+        <a class="author" title="${value.author}" href="${value.homepage}">${value.author.replace(/(.).+$/, '$1')}</a>
+        <a class="content" href="./detail.html?path=./markdown/${value.path}&title=${value.title}">${value.title}</a>
+        <div class="info-wrapper">
+          <a class="icon icon-github" href="${value.homepage}"></a>
+          <a class="icon icon-weibo" href="${value.weibo}"></a>
+        </div>
+      </li>`;
       result += html;
     });
     document.getElementById('list').innerHTML = result;
