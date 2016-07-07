@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title></title>
+  <link rel="stylesheet" href="tools/css/reveal.css">
+  <link rel="stylesheet" href="tools/css/theme/black.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section id="stage" data-separator="----">
+    </section>
+  </div>
+</div>
+<script src="tools/lib/js/head.min.js"></script>
+<script src="tools/js/reveal.js"></script>
+<script>
+  const getQueryObj = () => {
+    var obj = {};
+    var str = location.search.replace('?', '');
+    var arr = str.split('&');
+    arr.forEach(value => {
+      let k = value.match(/(.+)=.+/)[1];
+      let v = decodeURI(value.match(/.+=(.+)/)[1]);
+      obj[k] = v;
+    });
+    return obj;
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    let node = document.getElementById('stage');
+    let queryObj = getQueryObj();
+    let path = queryObj['path'];
+    document.title = queryObj['title'];
+    node.dataset.markdown = path;
+    Reveal.initialize({
+      history: true,
+
+      dependencies: [
+        {src: 'tools/plugin/markdown/marked.js'},
+        {src: 'tools/plugin/markdown/markdown.js'}
+      ]
+    });
+  }, false);
+</script>
+</body>
+</html>

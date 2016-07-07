@@ -3,23 +3,23 @@ speaker: Lellansin
 url: https://github.com/Lellansin
 transition: zoomin
 
-[slide]
+----
 
-# 函数式编程简介
-## 从入门到懵逼
+## 函数式编程简介
+### 从入门到懵逼
 
-[slide style="background:#000000 url('/img/bg1.jpg') no-repeat fixed center;"]
+----
 
-# 函数 {:&.flexbox.vleft}
-## 热身体操
+## 函数 {:&.flexbox.vleft}
+### 热身体操
 
-[slide]
+----
 
-# 常见的函数式编程语言
+## 常见的函数式编程语言
 ----
 
 
-## {:&.flexbox.left}
+### {:&.flexbox.left}
 * 比较纯粹的
 	* Clojure
 	* Erlang
@@ -31,7 +31,7 @@ transition: zoomin
 	* ...
 
 
-## {:&.flexbox.cernt}
+### {:&.flexbox.cernt}
 * 支持函数式的
 	* C++
 	* Java
@@ -42,9 +42,9 @@ transition: zoomin
 	* Ruby
 	* ...
 
-[slide]
+----
 
-## 回调函数
+### 回调函数
 
 ```C++
 #include <windows.h>
@@ -69,9 +69,9 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,
 }
 ```
 
-[slide]
+----
 
-## Lambda 表达式 (匿名函数)
+### Lambda 表达式 (匿名函数)
 
 ```C++
 #include <iostream>
@@ -98,7 +98,7 @@ void abssort(float* x, unsigned n) {
 }
 ```
 
-[slide]
+----
 
 先举一个普通的 Python 例子，将一个 list 里的每个元素都平方：
 ```python
@@ -124,9 +124,9 @@ map( lambda x: x*x, [1, 2, 3] )
 [1, 2, 3].map((x) => x*x )
 ```
 
-[slide]
+----
 
-# Python {:&.flexbox.vleft}
+## Python {:&.flexbox.vleft}
 
 The sum of all even numbers between 2 and 100(inclusive)
 
@@ -144,13 +144,13 @@ sum([x for x in range(2, 101) if x % 2 == 0])
 ```
 
 
-[slide]
+----
 
 如果你认同这样的写法比 for 循环<font color="skyblue">更清晰、简单</font> <br>
 那么你就已经认同了 <font color="orange">函数式编程范式</font> 的一个核心思想<br>
 使用`函数操作`代替`指令操作`
 
-[slide]
+----
 
 举例来说，现在有这样一个数学表达式：
 ```javascript
@@ -177,31 +177,31 @@ var result =
 (- ( * ( + 1 2) 3) 4)
 ```
 
-[slide]
+----
 
-# Everythins is sequence
+## Everythins is sequence
 
 Schema、Lisp、clojure ...
 
-[slide]
+----
 
-# 万物皆序列
-#### <font color="grey">FP 程序员的洗脑口号</font>
+## 万物皆序列
+##### <font color="grey">FP 程序员的洗脑口号</font>
 <br>
 
 ```
 函数( 参数序列 )
 ```
 
-[slide]
+----
 
-# 万物皆序列
+## 万物皆序列
 
 ```javascript
 函数 ( [ 函数(函数(序列)), 函数(序列), 值, 值, ... ] )
 ```
 
-[slide]
+----
 
 ```schema
  <!-- Scheme (1 + 2) * 3 - 4  -->
@@ -220,11 +220,11 @@ Schema、Lisp、clojure ...
 (+ 1 (- 3 2))
 ```
 
-[slide]
+----
 
 据说，一个黑客冒死偷到了美国用于导弹控制的lisp代码的最后一页，却发现那一页上全是右括号")"。
 
-[slide]
+----
 
 ```lisp
 ; 排序
@@ -252,11 +252,11 @@ Schema、Lisp、clojure ...
      )
 ```
 
-[slide style="background-image:url('/img/schema.jpg');"]
+----
 
 <h1 style="color: red">王垠的 40 行代码</h1>
 
-[slide]
+----
 
 Q: 为什么出现于上个世纪50年代的编程范式，到现在还没有过时？<br/>
 
@@ -266,13 +266,13 @@ A: 简单说，因为这种范式本质上不是一种技术，而是数学。<b
 
 函数式的初衷是为了实现理论演算，用更简洁的方式定义图灵机。<br/>
 
-[slide]
+----
 
-# 要想理解<font color="orange">递归</font>，必先理解<font color="orange">递归</font>。
+## 要想理解<font color="orange">递归</font>，必先理解<font color="orange">递归</font>。
 
 <img style="width: 250px; float: left; margin: 0 auto;" src="../img/digui.jpg">
 
-[slide]
+----
 
 用 Lisp 举个简单的例子，求一个数组的总和<br>
 
@@ -287,9 +287,9 @@ A: 简单说，因为这种范式本质上不是一种技术，而是数学。<b
 (total '(1 5 1))
 ```
 
-[slide]
+----
 
-## 更强的表达能力
+### 更强的表达能力
 
 ```
 sub(multiply(add(1,2), 3), 4)
@@ -308,7 +308,7 @@ merge([1,2],[3,4]).sort().search("2")
 ```
 通过 高阶函数、Currying等黑魔法可以得到接近自然语言的表达
 
-[slide]
+----
 
 * 只用"函数"，不用"指令"
   * 更强的表达能力
@@ -318,9 +318,9 @@ merge([1,2],[3,4]).sort().search("2")
   * 更容易并发/异步操作
   * 测试友好
 
-[slide]
+----
 
-# Linh Script
+## Linh Script
 
 ----
 <div class="columns-2">
@@ -346,9 +346,9 @@ echo "over".
 <br>
 *https://github.com/Lellansin/Linh*
 
-[slide]
+----
 
 <h1>没有银弹</h1>
 <h5><font color="skyblue">没有最好，只有最适合</font></h5><br>
-# 编程能力决定了是否优雅
-# Thanks
+## 编程能力决定了是否优雅
+## Thanks
