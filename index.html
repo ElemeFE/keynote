@@ -70,7 +70,7 @@
     let result = '';
     let data = JSON.parse(menu);
     data.list.forEach(function (value) {
-      let html = `<li><a class="author" href="${value.homepage}" title="${value.author}">${value.author.replace(/(.).+$/, '$1')}</a><a class="content" href="./detail.html?path=markdown/${value.path}">${value.title}</a></li>`
+      let html = `<li><a class="author" href="${value.homepage}" title="${value.author}">${value.author.replace(/(.).+$/, '$1')}</a><a class="content" href="./detail.html?path=./markdown/${value.path}&title=${value.title}">${value.title}</a></li>`
       result += html;
     });
     document.getElementById('list').innerHTML = result;
