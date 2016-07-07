@@ -1,0 +1,28 @@
+{
+  "list": [
+    {
+      "author": "黄鼎恒",
+      "homepage": "https://github.com/Lellansin",
+      "path": "FB intro - Lellansin.ppt.md",
+      "title": "函数式编程简介"
+    },
+    {
+      "author": "题叶",
+      "homepage": "https://github.com/jiyinyiyong",
+      "path": "respo.md",
+      "title": "Respo: a React-like DOM library"
+    },
+    {
+      "author": "蔡伟",
+      "homepage": "https://github.com/DavidCai1993",
+      "path": "Express vs Koa - 蔡伟.ppt.md",
+      "title": "Express & Koa"
+    },
+    {
+      "author": "李名凯",
+      "homepage": "https://github.com/lmk123",
+      "path": "Runner - lmk123.md",
+      "title": "开发 Runner 遇到的问题"
+    }
+  ]
+}

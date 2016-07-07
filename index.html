@@ -3,11 +3,81 @@
 <head>
   <meta charset="utf-8">
   <title>reveal.js</title>
+  <style>
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px;
+      color: #fff;
+      font-size: 12px;
+      line-height: 1;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all .2s ease-out;
+    }
+
+    a.author {
+      margin-right: 20px;
+      border: 1px solid hsl(200, 100%, 60%);
+      box-shadow: 2px 2px 5px 0 hsl(200, 100%, 60%);
+      background: -moz-linear-gradient(hsl(200, 100%, 80%), hsl(200, 100%, 60%));
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(hsl(200, 100%, 60%)), to(hsl(200, 100%, 80%)));
+    }
+
+    a.content {
+      border: 1px solid hsl(300, 100%, 80%);
+      box-shadow: 2px 2px 5px 0 hsl(300, 100%, 80%);
+      background: -moz-linear-gradient(hsl(300, 100%, 80%), hsl(300, 100%, 60%));
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(hsl(300, 100%, 80%)), to(hsl(300, 100%, 60%)));
+    }
+
+    li:hover a {
+      padding: 40px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
-  <a href="detail.html?path=markdown/Express vs Koa - 蔡伟.ppt.md">Express & Koa</a>
-  <a href="detail.html?path=markdown/FB intro - Lellansin.ppt.md">函数式编程简介</a>
-  <a href="detail.html?path=markdown/respo.md">Respo: a React-like DOM library</a>
-  <a href="detail.html?path=markdown/Runner - lmk123.md">开发 Runner 遇到的问题</a>
+<ul id="list">
+</ul>
 </body>
+<script>
+  const ajax = (path, callback) => {
+    let xhr = new XMLHttpRequest();
+    xhr.open('get', path, true);
+    xhr.send();
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState == 4) {
+        if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+          callback(xhr.responseText);
+        }
+      }
+    };
+  };
+
+  const init = menu => {
+    let result = '';
+    let data = JSON.parse(menu);
+    data.list.forEach(function (value) {
+      let html = `<li><a class="author" href="${value.homepage}" title="${value.author}">${value.author.replace(/(.).+$/, '$1')}</a><a class="content" href="./detail.html?path=markdown/${value.path}">${value.title}</a></li>`
+      result += html;
+    });
+    document.getElementById('list').innerHTML = result;
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    ajax('./menu.json', init);
+  }, false);
+</script>
 </html>
