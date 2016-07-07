@@ -2,6 +2,14 @@
 
 [elemefe.github.io/keynote](elemefe.github.io/keynote)
 
+## document syntax
+
+> you can see guide from [reveal-js](http://lab.hakim.se/reveal-js/)
+>
+> but only support markdown syntax so far.
+>
+> default separator `----`
+
 # insert new item
 
 > clone this repository to your local
