@@ -17,6 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
   document.title = queryObj['title'];
   node.dataset.markdown = path;
   Reveal.initialize({
+    width: 960,
+    height: 700,
+
+    // Factor of the display size that should remain empty around the content
+    margin: 0.1,
+
+    // Bounds for smallest/largest possible scale to apply to content
+    minScale: 0.2,
+    maxScale: 1.5,
+
     history: true,
 
     dependencies: [
