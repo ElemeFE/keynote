@@ -1,25 +1,46 @@
-### 演示方法
-凡是文件带有(.ppt)的后缀 都支持 nodeppt 演示
+## HomePage
 
-#### nodeppt安装方法
+[elemefe.github.io/keynote](https://elemefe.github.io/keynote)
 
-```
-npm install -g nodeppt
-```
+## document syntax
 
-#### shell使用
+> you can see guide from [reveal-js](http://lab.hakim.se/reveal-js/)
+>
+> but only support markdown syntax so far.
+>
+> default separator `----`
 
-##### 启动
+# insert new item
 
-```
-# 获取帮助
-nodeppt start -h
-# 绑定端口
-nodeppt start -p <port>
-```
+> clone this repository to your local
 
 ```
-nodeppt start -p 8090 -d path/for/ppts
-# 绑定host，默认绑定0.0.0.0
-nodeppt start -p 8080 -d path/for/ppts -H 127.0.0.1
+git clone git@github.com:ElemeFE/keynote.git
+vi keynote/markdown/xxx.md
 ```
+
+> append your information in menu.json
+
+```
+vi keynote/menu.json
+```
+
+> example
+
+```
+{
+  "list": [
+    {
+      "author": "your name",
+      "homepage": "your github homepage",
+      "path": "fullname of your document",
+      "title": "document name",
+      "weibo": "your weibo homepage"
+    }
+  ]
+}
+```
+
+> create new pull request to that branch named "gh-pages" and @ [yusphy45](github.com/yusphy45)
+>
+> if your pr is merged then you can access your document online.

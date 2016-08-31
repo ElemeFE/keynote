@@ -1,0 +1,53 @@
+{
+  "list": [
+    {
+      "author": "黄鼎恒",
+      "homepage": "https://github.com/Lellansin",
+      "path": "FB intro - Lellansin.ppt.md",
+      "title": "函数式编程简介",
+      "weibo": ""
+    },
+    {
+      "author": "题叶",
+      "homepage": "https://github.com/jiyinyiyong",
+      "path": "respo.md",
+      "title": "Respo: a React-like DOM library",
+      "weibo": ""
+    },
+    {
+      "author": "蔡伟",
+      "homepage": "https://github.com/DavidCai1993",
+      "path": "Express vs Koa - 蔡伟.ppt.md",
+      "title": "Express & Koa",
+      "weibo": ""
+    },
+    {
+      "author": "李名凯",
+      "homepage": "https://github.com/lmk123",
+      "path": "Runner - lmk123.md",
+      "title": "开发 Runner 遇到的问题",
+      "weibo": ""
+    },
+    {
+      "author": "李滨泓",
+      "homepage": "https://github.com/Rlilyyy",
+      "path": "Samesite机制.md",
+      "title": "SameSite机制",
+      "weibo": ""
+    },
+    {
+      "author": "郭银锋",
+      "homepage": "https://github.com/GYF1",
+      "path": "frontend-able.md",
+      "title": "前端ABLE",
+      "weibo": ""
+    },
+    {
+      "author": "李通洲",
+      "homepage": "https://github.com/CarterLi",
+      "path": "TypeScript - Carter.md",
+      "title": "TypeScript = Type + JavaScript",
+      "weibo": ""
+    }
+  ]
+}

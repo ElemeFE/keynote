@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ELEMEFE</title>
+  <style>
+    *, *:before, *:after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background-color: #000;
+      height: 100%;
+    }
+
+    header {
+      position: relative;
+      padding: 220px 60px 20px 60px;
+      text-align: center;
+      color: #eee;
+    }
+
+    .container {
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border: 5px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 5px 0 #fff;
+      background-color: #000;
+      position: absolute;
+      left: 50%;
+      top: 40px;
+      transform: translate3d(-50%, 0, 0);
+      padding: 60px 0;
+    }
+
+    .wrapper p {
+      padding: 20px 100px;
+      color: #999;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+      white-space: pre;
+    }
+
+    .wrapper {
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3);
+    }
+
+    ul {
+      padding: 30px;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    li:after {
+      display: block;
+      content: '';
+      visibility: hidden;
+      height: 0;
+      clear: both;
+    }
+
+    a {
+      position: relative;
+      display: inline-block;
+      color: #fff;
+      line-height: 1;
+      text-decoration: none;
+      border-radius: 12px;
+      cursor: pointer;
+      vertical-align: middle;
+    }
+
+    a.author {
+      width: 60px;
+      height: 60px;
+      margin-right: 40px;
+      border: 4px solid #fff;
+      font-size: 50px;
+      background: -moz-linear-gradient(hsl(200, 100%, 40%), hsl(200, 100%, 20%));
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(hsl(200, 100%, 40%)), to(hsl(200, 100%, 20%)));
+    }
+
+    a.author span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+
+    a.content {
+      padding: 16px 24px;
+      font-size: 16px;
+      border: 4px solid #fff;
+      background: linear-gradient(to bottom, #cec5c3 0, #a39a9c 50%, #857981 51%, #797175 100%);
+    }
+
+    a.content .arrow:before {
+      content: '';
+      display: block;
+      width: 22px;
+      height: 14px;
+      background: url(data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2263%22%20viewBox%3D%220%200%2024%2063%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M2.294%2039.046H24V33.22L12.737%2025.1H24v-9H12.737L24%207.975v-6.04l-21.706-.01v37.12z%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M19.947-.072v6.567L2.365%2020.035H19.97v1.094H2.406L20.04%2034.59l-.047%204.504H-.03V-.072h19.977z%22%20fill%3D%22%230A0A0A%22%2F%3E%3Cpath%20d%3D%22M2.246%2042h21.882v5.74L12.564%2052l11.564%203.986V62H2.246V42z%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M.083%2041H20v4.29L2.483%2052%2020%2058.523V63H.083V41z%22%20fill%3D%22%230A0A0A%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E) -2px -4px no-repeat;
+      background-position: -2px -45px;
+    }
+
+    a.content .arrow {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 22px;
+      height: 14px;
+      transform: translate3d(-22px, -50%, 0);
+      background-size: 60px;
+      background: linear-gradient(to bottom, #cec5c3 0, #a39a9c 50%, #857981 51%, #797175 100%);
+      background-position: 0 -28px;
+    }
+
+    li:hover .icon {
+      transform: scale(1, 1);
+    }
+
+    .info-wrapper {
+      float: right;
+      transition: all .2s ease-out;
+      overflow: hidden;
+    }
+
+    .icon {
+      transform: scale(0, 0);
+      transform-origin: 50% 50%;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background-size: 100% 100%;
+      transition: all .2s ease-out;
+    }
+
+    .icon-github {
+      background-image: url('./tools/img/github.png');
+    }
+
+    .icon-weibo {
+      background-image: url('./tools/img/weibo.png');
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1 class="logo">
+      ELEMEFE
+    </h1>
+    <small>ELEMEFE share online document.</small>
+  </header>
+  <div class="wrapper">
+    <p>
+      I don't know what are you looking for……
+      I made this just for fun. _(:3 」∠)_
+    </p>
+    <ul id="list">
+    </ul>
+  </div>
+</div>
+</body>
+<script src="./index.js"></script>
+</html>
