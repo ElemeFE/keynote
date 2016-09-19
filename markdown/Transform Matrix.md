@@ -8,6 +8,7 @@
 * 本意是母体，基础，孕育生命的地方
 
 * 数学中，表示矩形阵列
+
   ![matrix](http://odqtkmbuu.bkt.clouddn.com/1.png)
 
 ----
@@ -37,6 +38,7 @@
   - `transform-origin: top left`
 * default
   - `transform-origin: 50% 50%`
+  
   ![transform origin](http://odqtkmbuu.bkt.clouddn.com/2.png)
 
 ----
@@ -50,9 +52,13 @@
 ## Transform Matrix
 
 * transform: matrix(a, b, c, d, e, f)
+
   ![transform matrix](http://odqtkmbuu.bkt.clouddn.com/3.png)
+  
 * 转换公式
+
   ![transform formula](http://odqtkmbuu.bkt.clouddn.com/4.png)
+  
 * 计算公式
   - `x为 transform-origin 第一个参数，y为 transform-origin 第二个参数`
   - `x’ = ax + cy + e，x'，为变换元素后的水平位置`
