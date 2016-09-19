@@ -35,11 +35,15 @@ vi keynote/menu.json
       "homepage": "your github homepage",
       "path": "fullname of your document",
       "title": "document name",
+      "type": "md",
       "weibo": "your weibo homepage"
     }
   ]
 }
 ```
+> valid types include "md" , "html". default type is "md".
+>
+> then put your file into the corresponding folder.
 
 > create new pull request to that branch named "gh-pages" and @ [yusphy45](github.com/yusphy45)
 >
