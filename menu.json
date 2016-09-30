@@ -63,6 +63,14 @@
       "path": "Transform Matrix.md",
       "title": "CSS3 Transform Matrix",
       "weibo": ""
+    },
+    {
+      "author": "张凯",
+      "homepage": "https://github.com/damao1989",
+      "path": "Generator - damao.html",
+      "title": "Generator与异步编程",
+      "type": "html",
+      "weibo": ""
     }
   ]
 }
