@@ -71,6 +71,14 @@
       "title": "Generator与异步编程",
       "type": "html",
       "weibo": ""
+    },
+    {
+      "author": "张伟",
+      "homepage": "https://github.com/jerry-i",
+      "path": "server-side-rendering.html",
+      "title": "服务端渲染",
+      "type": "html",
+      "weibo": ""
     }
   ]
 }
