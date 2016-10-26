@@ -79,6 +79,14 @@
       "title": "服务端渲染",
       "type": "html",
       "weibo": ""
+    },
+    {
+      "author": "黄健",
+      "homepage": "https://github.com/bornkiller",
+      "path": "webpack-HMR.html",
+      "title": "webpack HMR探索",
+      "type": "html",
+      "weibo": ""
     }
   ]
 }
