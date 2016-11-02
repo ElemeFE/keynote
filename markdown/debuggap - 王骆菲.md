@@ -1,4 +1,4 @@
-title: 10月29日分享
+title: DebugGap跨平台开发和调试h5
 speaker: vicwang163
 url: https://github.com/vicwang163
 transition: move

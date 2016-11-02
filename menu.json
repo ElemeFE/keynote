@@ -62,6 +62,20 @@
       "path": "Dart - 杨一新.md",
       "title": "Dart",
       "weibo": ""
+    },
+    {
+      "author": "黄鼎恒",
+      "homepage": "https://github.com/Lellansin",
+      "path": "手工撸个监控系统 -  黄鼎恒.md",
+      "title": "手工撸个监控系统",
+      "weibo": ""
+    },
+    {
+      "author": "王骆菲",
+      "homepage": "https://github.com/vicwang163",
+      "path": "DebugGap - 王骆菲.md",
+      "title": "DebugGap跨平台开发和调试h5",
+      "weibo": ""
     }
   ]
 }
