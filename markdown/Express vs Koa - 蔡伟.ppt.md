@@ -2,7 +2,6 @@ title: 4月14日分享
 speaker: David Cai
 url: https://github.com/DavidCai1993
 transition: move
-theme: moon
 
 ----
 
