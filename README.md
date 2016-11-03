@@ -41,6 +41,7 @@ vi keynote/menu.json
 }
 ```
 
-> create new pull request to that branch named "gh-pages" and @ [yusphy45](github.com/yusphy45)
+> create new pull request to that branch named "master" and @ [Xavier](https://github.com/Yuanbin-xavier)
 >
 > if your pr is merged then you can access your document online.
+
