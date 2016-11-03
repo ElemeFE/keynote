@@ -1,7 +1,6 @@
 title: 起点中文网的的 Web 改造之路
 speaker: 梁晨
 transition: move
-theme: moon
 
 ----
 
