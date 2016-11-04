@@ -90,6 +90,13 @@
       "path": "写好业务逻辑 - 李寅侃.md",
       "title": "如何写好业务逻辑",
       "weibo": ""
+    },
+    {
+      "author": "夏浩茗",
+      "homepage": "https://github.com/Smallpath",
+      "path": "vue2服务端渲染 - 夏浩茗.md",
+      "title": "vue2服务端渲染",
+      "weibo": ""
     }
   ]
 }
