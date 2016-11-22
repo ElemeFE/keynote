@@ -1,0 +1,294 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>我的演说 - @演说.io</title>
+
+    <meta name="keywords" content="演说，yanshuo, yanshuo.io, 演说.io, 空中演说, 展示文稿, HTML 展示文稿, Web 展示文稿" />
+  	  <meta name="description" content="创作真正跨平台的 HTML5 展示文稿，让你的分享到达世界的任何一个角落" />
+
+  		<meta name="apple-mobile-web-app-capable" content="yes">
+  		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  		<!-- Reveal base style -->
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/css/reveal.min.css">
+
+  		<!-- Yanshuo.io seed style -->
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/atcss/at-block.min.css">
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/atcss/at-hljs-theme-bundler.min.css">
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/atcss/at-reveal-theme-bundler.min.css">
+
+  		<!-- Source Sans Web Fonts -->
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/lib/font/source-sans-pro/source-sans-pro.css">
+
+      <!-- Printing and PDF exports -->
+      <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://yanshuo.io/assets/player//css/print/pdf.css' : '';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      </script>
+
+      <!--[if lt IE 9]>
+  		<script src="lib/js/html5shiv.js"></script>
+  		<![endif]-->
+
+  		<!-- style for "critical path" -->
+  		<style>
+  	  </style>
+  </head>
+  <body>
+    <!-- TODO: a lightweighted loading -->
+
+    <!-- main slides -->
+    <div id="YS" class="at-code-lh-NaN" style="width:100%;height:100%;" data-reveal-theme="white" data-highlight-theme="github" data-ys-title="我的演说" data-ys-user="佫侒" data-ys-transition="fade" data-ys-backgroundTransition="default" data-ys-transitionSpeed="default"><div class="reveal"><div class="slides"><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:69.93851132686085px;top:232.94498381877023px;width:800px;" class="at-block at-block--pure"><article class="at-block-content"><h1>GraphQL</h1></article></div><div style="left:75.11650485436893px;top:477.6051779935275px;width:800px;" class="at-block at-block--pure"><article class="at-block-content"><p><span style="font-size:24px">徐静静</span></p><p><span style="font-size:24px">Node.js 研发组</span></p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:76.41100323624595px;top:60.80906148867315px;width:266.66666666666674px;height:51.29449838187706px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><ul>
+<li>GraphQL 简介</li>
+</ul>
+</article></div><div style="left:97.98252733756017px;top:276.38004142548107px;width:800px;" class="at-block at-block--pure"><article class="at-block-content"><p style="text-align:left"><span style="font-size:28px">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:26px">GraphQL&nbsp;是一个由Facebook提出的&nbsp;<strong>应用层查询语言</strong>. </span></p><p style="text-align:left"><span style="font-size:26px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;GraphQL 的客户端可以很灵活地在<u>服务器能力范围内</u>进行各种查询的组合，这种能力对向后兼容和版本控制很有好处。REST API 在进化的过程中往往要随着 API 版本而变迁，&nbsp;GraphQL API 基本没这个必要。对于同一 API，服务器只需要添加新的 field，新的客户端查询时使用新的 field 即可，不会影响老客户端。这是一种很优雅的进化方案。</span></p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:76.41100323624595px;top:60.80906148867315px;width:266.66666666666674px;height:51.29449838187706px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><ul>
+<li>GraphQL 图示</li>
+</ul>
+</article></div><div style="width:745.8693507006118px;height:431.88241435728975px;left:111.90053285968028px;top:180.8567008537214px;" class="at-block at-block--pure"><article class="at-block-content"><img src=http://upload-images.jianshu.io/upload_images/551828-8d055caea7562605.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 /></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:76.41100323624595px;top:60.80906148867315px;width:355.98705501618133px;height:51.29449838187706px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><ul>
+<li>GraphQL 两种操作</li>
+</ul>
+</article></div><div style="left:204.27184466019418px;top:288.60841423948216px;width:582.5242718446602px;height:auto0000;" class="at-block at-block--pure"><article class="at-block-content"><ul><li style="text-align:left"><span style="font-size:36px"><strong><span style="color:#A4DD00">query</span></strong></span><span style="font-size:28px">：仅获取数据（fetch）的只读请求</span></li></ul><p style="text-align:left">&nbsp;</p><ul><li style="text-align:left"><span style="font-size:36px"><strong><span style="color:#A4DD00">mutation</span></strong></span><span style="font-size:28px">：获取数据后还有写操作的请求</span></li></ul></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:76.41100323624595px;top:60.80906148867315px;width:516.5048543689321px;height:51.29449838187706px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><ul>
+<li>GraphQL 字段（Field）格式</li>
+</ul>
+</article></div><div style="left:168.32038834951462px;top:135.85760517799363px;width:699.0291262135922px;height:auto0000;" class="at-block at-block--pure"><article class="at-block-content"><p style="text-align:left">&nbsp;</p><p style="text-align:left"><span style="font-size:26px"><span style="color:#A4DD00">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alias:name(argument:value) &nbsp; </span></span></p><h6 style="text-align:left"><span style="font-size:8px"><span style="color:#A4DD00">&nbsp; </span></span></h6><ul><li style="text-align:left"><span style="font-size:24px"><strong>alias</strong>&nbsp;是字段的别名，即结果中显示的字段名称。</span></li><li style="text-align:left"><span style="font-size:24px"><strong>name</strong>&nbsp;为字段名称，对应 <strong>schema</strong> 中定义的 <strong>fields</strong> 字段名。</span></li><li style="text-align:left"><span style="font-size:24px"><strong>argument</strong>&nbsp;为参数名称，对应 <strong>schema</strong> 中定义的 <strong>fields</strong> 字段的参数名称。</span></li><li style="text-align:left"><span style="font-size:24px"><strong>value</strong>&nbsp;为参数值，值的类型对应标量类型的值。</span></li></ul></article></div><div style="left:108.77346278317151px;top:582.4595469255663px;width:800px;" class="at-block at-block--pure"><article class="at-block-content"><p style="text-align:left"><span style="font-size:26px"><span style="color:#A4DD00">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 例：&nbsp; &nbsp; &nbsp; &nbsp; xxx/?query={user{userName:name(id:"1")}}</span></span></p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:76.41100323624595px;top:60.80906148867315px;width:358.57605177993537px;height:51.29449838187706px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><ul>
+<li>GraphQL: query</li>
+</ul>
+</article></div><div style="left:601.2653721682848px;top:234.85436893203885px;width:302.9126213592233px;height:150.16181229773466px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>{
+  <span class="hljs-attr">"user"</span>: {
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"hean"</span>
+  }
+}
+</code></pre>
+</article></div><div style="left:441.1035598705501px;top:266.2459546925566px;width:89.32038834951459px;height:auto;" class="at-block at-block--pure"><article class="at-block-content"><p><span style="font-size:72px">➱</span></p></article></div><div style="left:78.64401294498379px;top:235.37216828478967px;width:236.89320388349512px;height:145.8821950163723px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>{
+  <span class="hljs-keyword">user</span> <span class="hljs-title">{
+    name</span>
+  }
+}
+</code></pre>
+</article></div><div style="left:144.3074433656958px;top:567.5080906148868px;width:763.7540453074434px;height:auto00000;" class="at-block at-block--pure"><article class="at-block-content"><p style="text-align:left"><strong><span style="font-size:28px">返回的数据跟查询用的语言是非常像的，结构是对应的。</span></strong></p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:76.41100323624595px;top:60.80906148867315px;width:358.57605177993537px;height:51.29449838187706px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><ul>
+<li>GraphQL: query</li>
+</ul>
+</article></div><div style="left:601.2653721682848px;top:234.85436893203885px;width:302.9126213592233px;height:150.16181229773466px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>{
+  <span class="hljs-attr">"user"</span>: {
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"hean"</span>
+  }
+}
+</code></pre>
+</article></div><div style="left:447.5760517799352px;top:305.08090614886726px;width:89.32038834951459px;height:auto;" class="at-block at-block--pure"><article class="at-block-content"><p><span style="font-size:72px">➱</span></p></article></div><div style="left:78.64401294498379px;top:235.37216828478967px;width:236.89320388349512px;height:145.8821950163723px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>{
+  <span class="hljs-keyword">user</span> <span class="hljs-title">{
+    name</span>
+  }
+}
+</code></pre>
+</article></div><div style="left:144.3074433656958px;top:567.5080906148868px;width:763.7540453074434px;height:auto00000;" class="at-block at-block--pure"><article class="at-block-content"><p style="text-align:left"><strong><span style="font-size:28px">返回的数据跟查询用的语言是非常像的，结构是对应的。</span></strong></p></article></div><div style="left:76.99352750809055px;top:211.7152103559871px;width:324.91909385113263px;height:271.325282270802px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>{
+  user {
+    name,
+    avatar {
+      width,
+      height,
+      url
+    }
+  }
+}
+</code></pre>
+</article></div><div style="left:577.6084142394822px;top:214.61621442203966px;width:337.8640776699029px;height:271.0148535391254px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>{
+  <span class="hljs-string">"user"</span> {
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"hean,"</span>
+    <span class="hljs-string">"avatar"</span>: {
+      <span class="hljs-string">"width"</span>: <span class="hljs-number">50</span>,
+      <span class="hljs-string">"height"</span>: <span class="hljs-number">50</span>,
+      <span class="hljs-string">"url"</span>: <span class="hljs-string">"xxx"</span>
+    }
+  }
+}
+</code></pre>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:76.41100323624595px;top:60.80906148867315px;width:304.20711974110037px;height:51.29449838187706px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><ul>
+<li>GraphQL: query</li>
+</ul>
+</article></div><div style="left:24.27508090614885px;top:156.05470275744227px;width:416.82847896440126px;height:274.0116712041763px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>{
+  user {
+    name,
+    avatar(<span class="hljs-name">size:</span> <span class="hljs-number">300</span>) {
+      size,
+      url
+    }
+  }
+}
+</code></pre>
+</article></div><div style="left:127.83495145631068px;top:492.78317152103557px;width:763.7540453074434px;height:auto00000;" class="at-block at-block--pure"><article class="at-block-content"><p style="text-align:left"><span style="font-size:26px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 头像可能会有多个尺寸，我们也可以查询特定尺寸的用户头像，方法就是指定一个参数还有对应的值，这里就是指定了一个 size 参数，值设置成了 300</span></p></article></div><div style="left:605.1488673139158px;top:158.28771246618012px;width:323.6245954692556px;height:274.0116712041763px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>{
+  <span class="hljs-string">"user"</span> {
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"hean,"</span>
+    <span class="hljs-string">"avatar"</span>: {
+      <span class="hljs-string">"size"</span>: <span class="hljs-number">300</span>,
+      <span class="hljs-string">"url"</span>: <span class="hljs-string">"xxx"</span>
+    }
+  }
+}
+</code></pre>
+</article></div><div style="left:466.6375404530744px;top:255.5339805825242px;width:89.32038834951459px;height:auto;" class="at-block at-block--pure"><article class="at-block-content"><p><span style="font-size:72px">➱</span></p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:76.41100323624595px;top:60.80906148867315px;width:295.14563106796123px;height:51.29449838187706px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><ul>
+<li>GraphQL: query</li>
+</ul>
+</article></div><div style="left:20.747572815533992px;top:178.6084142394822px;width:494.49838187702267px;height:349.8381877022654px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>{
+  user {
+    name,
+    avatarLittle: avatar (<span class="hljs-name">size:</span> <span class="hljs-number">50</span>) {
+      size,
+      url
+    },
+    avatarBig: avatar(<span class="hljs-name">size:</span> <span class="hljs-number">300</span>) {
+      size,
+      url
+    }
+  }
+}
+</code></pre>
+</article></div><div style="left:643.0453074433657px;top:181.94054258761963px;width:299.0291262135923px;height:346.1500722991118px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>{
+  <span class="hljs-string">"user"</span> {
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"hean,"</span>
+    <span class="hljs-string">"avatarLittle"</span>: {
+      <span class="hljs-string">"size"</span>: <span class="hljs-number">50</span>,
+      <span class="hljs-string">"url"</span>: <span class="hljs-string">"xx"</span>
+    },
+    <span class="hljs-string">"avatarBig"</span>: {
+      <span class="hljs-string">"size"</span>: <span class="hljs-number">300</span>,
+      <span class="hljs-string">"url"</span>: <span class="hljs-string">"xxx"</span>
+    }
+  }
+}
+</code></pre>
+</article></div><div style="left:539.1294498381876px;top:317.66990291262135px;width:89.32038834951459px;height:auto;" class="at-block at-block--pure"><article class="at-block-content"><p><span style="font-size:72px">➱</span></p></article></div><div style="left:60.5210355987055px;top:591.1650485436893px;width:863.4304207119742px;height:auto00;" class="at-block at-block--pure"><article class="at-block-content"><p style="text-align:left"><strong><span style="font-size:26px">在查询里面，可以用不同的条件多次查询同一个字段，然后使用别名区分。</span></strong></p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:75.11650485436893px;top:59.51456310679613px;width:362.4595469255664px;height:59.06148867313921px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><ul>
+<li>GraphQL:mutation</li>
+</ul>
+</article></div><div style="left:136.89644012944984px;top:183.43042071197405px;width:699.0291262135922px;height:427.5080906148868px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>{
+    <span class="hljs-attribute">query</span>: `
+    mutation <span class="hljs-built_in">M</span>($name: String!) {
+      <span class="hljs-built_in">createUser</span>(name: $name) {
+        name
+        friends {
+          name
+        }
+      }
+    }
+    `,
+    <span class="hljs-selector-tag">params</span>: {
+      <span class="hljs-attribute">name</span>: <span class="hljs-string">'Wedge'</span>
+    }
+  }
+</code></pre>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:75.11650485436893px;top:59.51456310679613px;width:362.4595469255664px;height:59.06148867313921px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><ul>
+<li>GraphQL:mutation</li>
+</ul>
+</article></div><div style="left:136.89644012944984px;top:183.43042071197405px;width:699.0291262135922px;height:427.5080906148868px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>{
+    <span class="hljs-attribute">query</span>: `
+    mutation <span class="hljs-built_in">M</span>($userId: String! $name: String!) {
+      <span class="hljs-built_in">updateUser</span>(id: $userId name: $name) {
+        name
+        friends {
+          name
+        }
+      }
+    }
+    `,
+    <span class="hljs-selector-tag">params</span>: {
+      <span class="hljs-attribute">userId</span>: userId,
+      name: name
+    }
+  }
+</code></pre>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:75.11650485436893px;top:59.51456310679613px;width:362.4595469255664px;height:59.06148867313921px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><ul>
+<li>GraphQL:mutation</li>
+</ul>
+</article></div><div style="left:136.89644012944984px;top:183.43042071197405px;width:699.0291262135922px;height:427.5080906148868px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>{
+    <span class="hljs-attribute">query</span>: `
+    mutation <span class="hljs-built_in">M</span>($userId: String!) {
+      <span class="hljs-built_in">deleteUser</span>(id: $userId) {
+        name
+        friends {
+          name
+        }
+      }
+    }
+    `,
+    <span class="hljs-selector-tag">params</span>: {
+      <span class="hljs-attribute">userId</span>: deleteId
+    }
+  }
+</code></pre>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:76.41100323624595px;top:60.80906148867315px;width:516.5048543689321px;height:51.29449838187706px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><ul>
+<li>GraphQL 片段（Fragment）</li>
+</ul>
+</article></div><div style="left:103.59546925566343px;top:298.9644012944984px;width:800px;" class="at-block at-block--pure"><article class="at-block-content"><p style="text-align:left"><span style="font-size:26px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;片段是 GraphQL 的主要组合数据结构，通过片段可以复用重复的字段，减少 query 中的重复内容。片段又分为 FragmentSpread 和 InlineFragment。</span></p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:76.41100323624595px;top:60.80906148867315px;width:516.5048543689321px;height:51.29449838187706px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><ul>
+<li>GraphQL 片段（Fragment）</li>
+</ul>
+</article></div><div style="left:11.686084142394828px;top:177.3139158576052px;width:403.8834951456311px;height:383.49514563106806px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>query noFragments {
+  user(<span class="hljs-built_in">id</span>: <span class="hljs-number">4</span>) {
+    friends(<span class="hljs-keyword">first</span>: <span class="hljs-number">10</span>) {
+      <span class="hljs-built_in">id</span>
+      <span class="hljs-built_in">name</span>
+      avatar(size: <span class="hljs-number">50</span>)
+    }
+    mutualFriends(<span class="hljs-keyword">first</span>: <span class="hljs-number">10</span>) {
+      <span class="hljs-built_in">id</span>
+      <span class="hljs-built_in">name</span>
+      avatar(size: <span class="hljs-number">50</span>)
+    }
+  }
+}
+</code></pre>
+</article></div><div style="left:517.4789644012945px;top:143.3009708737864px;width:419.4174757281554px;height:435.2750809061489px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><pre class="hljs"><code>query withFragments {
+  user(<span class="hljs-built_in">id</span>: <span class="hljs-number">4</span>) {
+    friends(<span class="hljs-keyword">first</span>: <span class="hljs-number">10</span>) {
+      ...friendFields
+    }
+    mutualFriends(<span class="hljs-keyword">first</span>: <span class="hljs-number">10</span>) {
+      ...friendFields
+    }
+  }
+}
+
+fragment friendFields <span class="hljs-keyword">on</span> User {
+  <span class="hljs-built_in">id</span>
+  <span class="hljs-built_in">name</span>
+  avatar(size: <span class="hljs-number">50</span>)
+}
+</code></pre>
+</article></div><div style="left:428.74110032362455px;top:336.7313915857605px;width:89.32038834951459px;height:auto;" class="at-block at-block--pure"><article class="at-block-content"><p><span style="font-size:72px">=</span></p></article></div><div style="left:67.3495145631068px;top:623.8834951456311px;width:800px;" class="at-block at-block--pure"><article class="at-block-content"><p><strong><span style="font-size:28px">使用片段时需要加上&nbsp;...&nbsp;操作符表示展开片段内容。</span></strong></p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:76.41100323624595px;top:60.80906148867315px;width:516.5048543689321px;height:51.29449838187706px;" class="at-block at-block--pure"><article class="at-block-content MarkdownBlock"><ul>
+<li>GraphQL 深入</li>
+</ul>
+</article></div><div style="left:165.73139158576052px;top:327.4433656957928px;width:622.6537216828478px;height:auto;" class="at-block at-block--pure"><article class="at-block-content"><ul><li><a href="https://facebook.github.io/graphql/">https://facebook.github.io/graphql/</a></li><li><a href="http://graphql.org/">http://graphql.org/</a></li></ul></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="fade-in fade-out"><div style="left:80px;top:260px;width:800px;" class="at-block at-block--pure"><article class="at-block-content"><h1>END.</h1></article></div></section><style>.at-block{ position:absolute }</style></div></div></div>
+
+    <!-- dependencies -->
+		<script src="https://yanshuo.io/assets/player/lib/js/head.min.js"></script>
+		<script src="https://yanshuo.io/assets/player/js/reveal.min.js"></script>
+
+    <!-- init -->
+    <script>
+      Reveal.initialize({
+        controls: true,
+        history: true,
+        center: false,
+
+        transition:             'fade',
+        backgroundTransition:   'default',
+        transitionSpeed:        'default',
+
+        // no marked.js
+				// no markdown.js
+				// no highlight.js
+				dependencies: [
+					{ src: 'https://yanshuo.io/assets/player/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'https://yanshuo.io/assets/player/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'https://yanshuo.io/assets/player/plugin/notes/notes.js', async: true }
+				]
+      });
+    </script>
+  </body>
+</html>
