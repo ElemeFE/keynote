@@ -113,7 +113,6 @@
       "weibo": ""
     },
     {
-
       "author": "孙卓怡",
       "homepage": "https://github.com/Sunzhuoyi",
       "path": "The humble border-radius - 孙卓怡.md",
@@ -125,6 +124,13 @@
       "homepage": "https://github.com/jsongzp",
       "path": "搭建一款前端脚手架 - 葛展鹏.md",
       "title": "搭建一款前端脚手架",
+      "weibo": ""
+    },
+    {
+      "author": "魏陈南",
+      "homepage": "https://github.com/kinglisky",
+      "path": "弹幕的二三事 - 魏陈南.md",
+      "title": "关于弹幕的二三事",
       "weibo": ""
     }
   ]
