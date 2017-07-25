@@ -4,15 +4,15 @@
 
 ## 石器时代的 C/C++
     
-    C/C++ 标准库中并没有包含网络库，基本上处于石器时代。C 语言一般可以用操作系统提供的非常原始的库进行一些网络访问。对网络感兴趣的 C 语言系小伙伴都会有过自己实现网络库的经历。
+C/C++ 标准库中并没有包含网络库，基本上处于石器时代。C 语言一般可以用操作系统提供的非常原始的库进行一些网络访问。对网络感兴趣的 C 语言系小伙伴都会有过自己实现网络库的经历。
     
     
 ## 简介
-    C/C++ 下的 TCP 网络库已经非常成熟了，其中著名的有libevent，Boost.Asio，muduo 等。以 Reactor 模式为代表的是 libevent，而 Boost.Asio 则是 Proactor 模式。
+C/C++ 下的 TCP 网络库已经非常成熟了，其中著名的有libevent，Boost.Asio，muduo 等。以 Reactor 模式为代表的是 libevent，而 Boost.Asio 则是 Proactor 模式。
 
 ## 跨平台的痛
-    Linux 与 Windows 操作系统下的最佳实践是不一样的。Windows 通常使用 Proactor 模式， 而 Linux 使用 Reactor 模式的居多。Proactor 模式一般比 Reactor 多做一些事。 
-    如果想要实现跨平台，那么统一使用 Proactor 是个不错的主意。但是在 Linux 上模拟 Proactor 可能会损失一部分性能。这也是 Boost.Asio 备受争议的原因之一。
+Linux 与 Windows 操作系统下的最佳实践是不一样的。Windows 通常使用 Proactor 模式， 而 Linux 使用 Reactor 模式的居多。Proactor 模式一般比 Reactor 多做一些事。 
+如果想要实现跨平台，那么统一使用 Proactor 是个不错的主意。但是在 Linux 上模拟 Proactor 可能会损失一部分性能。这也是 Boost.Asio 备受争议的原因之一。
     
     
  ## Reactor 模式的主循环
@@ -48,9 +48,9 @@ c：IO事件发生的线程是固定的，同一个TCP连接不必考虑事件�
 
 ## 充分利用多核
 
-    显而易见，设置和核心数一样的线程数能最大程度减小线程切换带来的开销，使得拥有良好性能。开多个线程跑多个 Loop 是个好主意。
-    在老版本的 Linux 无法多个线程同时监听同一个 TCP 端口。如果想实现 HTTP 服务器，那么端口只能有一个。并发模型会变得很复杂。
-    在 Linux 3.9 之后，可以用 SO_REUSEPORT 解决。多个线程同时监听， 操作系统自己来均衡分配。只要把单线程模型多开几个线程同时监听一个端口，就能得到性能提升。
+显而易见，设置和核心数一样的线程数能最大程度减小线程切换带来的开销，使得拥有良好性能。开多个线程跑多个 Loop 是个好主意。
+在老版本的 Linux 无法多个线程同时监听同一个 TCP 端口。如果想实现 HTTP 服务器，那么端口只能有一个。并发模型会变得很复杂。
+在 Linux 3.9 之后，可以用 SO_REUSEPORT 解决。多个线程同时监听， 操作系统自己来均衡分配。只要把单线程模型多开几个线程同时监听一个端口，就能得到性能提升。
     
 ## 非阻塞的connect
 
@@ -69,13 +69,13 @@ c：IO事件发生的线程是固定的，同一个TCP连接不必考虑事件�
  
  ## 实现高效率 write
  
-     调用 write 时，write 会返回成功写出的字节数。只是成功写入缓冲区里，并没有实际上的发送。当缓冲区写满了会返回 EAGAIN 。
-    LT 模式可以让代码变得简洁。开启 EPOLLOUT 以后，每次可写都会触发写事件，所以发送非常悠然自得。而 ET 只会在可写的时候提示一次，增加了代码编写难度。
+调用 write 时，write 会返回成功写出的字节数。只是成功写入缓冲区里，并没有实际上的发送。当缓冲区写满了会返回 EAGAIN 。
+LT 模式可以让代码变得简洁。开启 EPOLLOUT 以后，每次可写都会触发写事件，所以发送非常悠然自得。而 ET 只会在可写的时候提示一次，增加了代码编写难度。
     
   
  ## 定时器
  
-     Linux 下关于时间的函数非常多。
+Linux 下关于时间的函数非常多。
 time/ time_t,
 ftime/timeb, 
 gettimeofday/ timeval, 
@@ -86,8 +86,9 @@ clock_gettime/timespec 等等。
     
   ## 定时器2
   
-     如果不想用 linux 提供的 timerfd_create. 可以自行用红黑树（或者最大堆）实现定时器的就绪队列。在每次 epoll 返回的时候判断头部是否超时，超时则拿出来执行。
+如果不想用 linux 提供的 timerfd_create. 可以自行用红黑树（或者最大堆）实现定时器的就绪队列。在每次 epoll 返回的时候判断头部是否超时，超时则拿出来执行。
 
+```
  while(!time_queue_.empty()) {
         Time time_now;
         time_now.now();
@@ -99,12 +100,14 @@ clock_gettime/timespec 等等。
         event->set_execute_times(event->execute_times() + 1);
         event->execute_callback();
     }
-    
-  ## 忽略SIGPIPE信号
+  ```  
+
+## 忽略SIGPIPE信号
   
-      对一个对端已经关闭的socket调用两次write, 第二次将会生成SIGPIPE信号, 该信号默认结束进程。
+对一个对端已经关闭的socket调用两次write, 第二次将会生成SIGPIPE信号, 该信号默认结束进程。
 
 忽略SIGPIPE信号的方法：
+```
 struct sigaction sa;
 sa.sa_handler = SIG_IGN;
 sa.sa_flags = 0;
@@ -112,6 +115,7 @@ if (sigemptyset(&sa.sa_mask) == -1 ||  sigaction(SIGPIPE, &sa, 0) == -1) {
     perror("failed to ignore SIGPIPE; sigaction");
     exit(EXIT_FAILURE);
 }
+```
 
 ## 文件描述符达到上限
    accept 可能会返回 EMFILE 表示本进程的文件描述符用完了。 于是乎 LT 模式的 epoll 会疯狂提示文件描述符可读，但是没有新的文件描述符可用, 无法处理该事情，造成无限循环， CPU 占用率可达100%。
@@ -122,8 +126,8 @@ if (sigemptyset(&sa.sa_mask) == -1 ||  sigaction(SIGPIPE, &sa, 0) == -1) {
 
 ## 诊断日志
 
-    生产环境无时无刻都在打印各种各样的日志信息。设置 Trace， Debug， Info， Warn ，Error， Fatal 等多种级别。日志一般写在本地文件里。往网络写日志可能会遇到网络故障。不靠谱。有中心节点这种，中心节点挂了就悲剧了。
-    日志需要实现“滚动”，不可以无限扩充导致硬盘不够。可以用几十个大小合理的文件轮流滚动记录，超过了就覆盖前面的内容，形成一个环。
+生产环境无时无刻都在打印各种各样的日志信息。设置 Trace， Debug， Info， Warn ，Error， Fatal 等多种级别。日志一般写在本地文件里。往网络写日志可能会遇到网络故障。不靠谱。有中心节点这种，中心节点挂了就悲剧了。
+日志需要实现“滚动”，不可以无限扩充导致硬盘不够。可以用几十个大小合理的文件轮流滚动记录，超过了就覆盖前面的内容，形成一个环。
     
     
 ## 日志的性能
