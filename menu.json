@@ -50,6 +50,14 @@
       "weibo": ""
     },
     {
+      "author": "喻争",
+      "homepage": "https://github.com/axemea",
+      "path": "Abstract Thinking - axemea.html",
+      "title": "抽象思维 - Canvas绘制‘饿了么’Logo",
+      "type": "html",
+      "weibo": ""
+    },
+    {
       "author": "汤伟伟",
       "homepage": "https://github.com/keepsilentw",
       "path": "Transform Matrix.md",
@@ -166,6 +174,27 @@
       "homepage": "https://github.com/sunfishgao",
       "path": "C++ 网络库那点事儿 - 高春毅.md",
       "title": "c++ 网络库那点事儿",
+      "author": "张凯",
+      "homepage": "https://github.com/damao1989",
+      "path": "Generator - damao.html",
+      "title": "Generator与异步编程",
+      "type": "html",
+      "weibo": ""
+    },
+    {
+      "author": "张伟",
+      "homepage": "https://github.com/jerry-i",
+      "path": "server-side-rendering.html",
+      "title": "服务端渲染",
+      "type": "html",
+      "weibo": ""
+    },
+    {
+      "author": "黄健",
+      "homepage": "https://github.com/bornkiller",
+      "path": "webpack-HMR.html",
+      "title": "webpack HMR探索",
+      "type": "html",
       "weibo": ""
     }
   ]
