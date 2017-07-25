@@ -35,13 +35,16 @@ vi keynote/menu.json
       "homepage": "your github homepage",
       "path": "fullname of your document",
       "title": "document name",
+      "type": "md",
       "weibo": "your weibo homepage"
     }
   ]
 }
 ```
+> valid types include "md" , "html". default type is "md".
+>
+> then put your file into the corresponding folder.
 
 > create new pull request to that branch named "master" and @ [Xavier](https://github.com/Yuanbin-xavier)
 >
 > if your pr is merged then you can access your document online.
-
