@@ -196,6 +196,13 @@
       "title": "webpack HMR探索",
       "type": "html",
       "weibo": ""
+    },
+    {
+      "author": "朱良臻",
+      "homepage": "https://github.com/zhuscat",
+      "path": "浅谈 Functor - 朱良臻.md",
+      "title": "浅谈 Functor",
+      "weibo": ""
     }
   ]
 }
