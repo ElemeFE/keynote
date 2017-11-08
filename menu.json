@@ -203,6 +203,14 @@
       "path": "浅谈 Functor - 朱良臻.md",
       "title": "浅谈 Functor",
       "weibo": ""
+    },
+    {
+      "author": "喻争",
+      "homepage": "https://github.com/axemea",
+      "path": "vue-amap.html",
+      "title": "浅析第三方服务与 Vue 的结合",
+      "type": "html",
+      "weibo": ""
     }
   ]
 }
