@@ -211,6 +211,14 @@
       "title": "浅析第三方服务与 Vue 的结合",
       "type": "html",
       "weibo": ""
+    },
+    {
+      "author": "冰霜",
+      "homepage": "https://github.com/halfrost",
+      "path": "./PPT/spatial_index_by_冰霜.pdf",
+      "title": "空间索引在地理服务中实践",
+      "type": "pdf",
+      "weibo": ""
     }
   ]
 }
