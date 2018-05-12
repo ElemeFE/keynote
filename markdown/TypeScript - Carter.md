@@ -183,9 +183,7 @@ function f(today) {
 
 * TypeScript 支持编译 Decorator，async、await（仅支持编译为 generator）到 ES6 代码
 
-* 在此基础上，TypeScript 还支持
-
-* enum、类成员变量初始化等特性。
+* 在此基础上，TypeScript 还支持enum、类成员变量初始化等特性。
 
 ----
 
