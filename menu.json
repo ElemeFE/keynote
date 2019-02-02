@@ -211,6 +211,14 @@
       "title": "浅析第三方服务与 Vue 的结合",
       "type": "html",
       "weibo": ""
+    },
+    {
+      "author": "张健亮",
+      "homepage": "https://github.com/leonzhang1108",
+      "path": "svg拖拽缩放公式推导 - 张健亮",
+      "title": "svg拖拽缩放公式推导",
+      "type": "html",
+      "weibo": "https://weibo.com/ultralight"
     }
   ]
 }
